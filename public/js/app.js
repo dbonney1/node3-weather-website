@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit', (event) => {
     forecastDiv.appendChild(loadingGif);
 
     // fetch the forecast data using location as an argument
-    fetch(`http://localhost:3000/weather?address=${encodeURIComponent(location)}`).then(
+    fetch(`/weather?address=${encodeURIComponent(location)}`).then(
     (response) => {
         response.json().then((data) => {
             forecastDiv.innerHTML = '';
