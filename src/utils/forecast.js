@@ -10,6 +10,7 @@ const forecast = (latitude, longitude, callback) => {
         } else {
             callback(undefined, {
                 location: body.location.name,
+                summary: body.current.weather_descriptions[0],
                 currentTemp: body.current.temperature,
                 heatIndex: body.current.feelslike,
                 rainChance: `${(body.current.precip * 100)}%`
